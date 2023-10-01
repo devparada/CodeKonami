@@ -42,9 +42,9 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="jPnlMain" min="-2" pref="266" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="32767" attributes="0"/>
-              <Component id="jPnlInformation" min="-2" pref="85" max="-2" attributes="0"/>
+              <Component id="jPnlMain" min="-2" pref="238" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="jPnlInformation" min="-2" pref="70" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -111,19 +111,13 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
         <Property name="columns" type="int" value="0"/>
-        <Property name="rows" type="int" value="2"/>
+        <Property name="rows" type="int" value="1"/>
       </Layout>
       <SubComponents>
         <Component class="javax.swing.JLabel" name="jLblKeys">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Teclas: Up, up, down, down, left, right, left, right, B, A, ENTER"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLblShift">
-          <Properties>
-            <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="En el code konami original: el ENTER del teclado es el SHIFT en consolas"/>
+            <Property name="text" type="java.lang.String" value="Combinaci&#xf3;n: Up, up, down, down, left, right, left, right, B, A"/>
           </Properties>
         </Component>
       </SubComponents>

@@ -26,11 +26,11 @@ public class CodeKonami {
      */
     private int positionArray = 0;
     /**
-     * Capacidad en el arrayKonami
+     * Capacidad del arrayKonami + 1
      */
-    public static final int CAPACITY_ARRAY = 11;
+    public static final int CAPACITY_ARRAY = 10;
     /**
-     * Status in the method verify()
+     * Estado en el método verify()
      */
     private boolean flagVerify = false;
     /**
@@ -93,7 +93,7 @@ public class CodeKonami {
             if (arrayKonami.get(i) == KeyEvent.VK_UP && arrayKonami.get(i + 1) == KeyEvent.VK_UP && arrayKonami.get(i + 2) == KeyEvent.VK_DOWN
                     && arrayKonami.get(i + 3) == KeyEvent.VK_DOWN && arrayKonami.get(i + 4) == KeyEvent.VK_LEFT && arrayKonami.get(i + 5) == KeyEvent.VK_RIGHT
                     && arrayKonami.get(i + 6) == KeyEvent.VK_LEFT && arrayKonami.get(i + 7) == KeyEvent.VK_RIGHT && arrayKonami.get(i + 8) == KeyEvent.VK_B
-                    && arrayKonami.get(i + 9) == KeyEvent.VK_A && arrayKonami.get(i + 10) == KeyEvent.VK_ENTER) {
+                    && arrayKonami.get(i + 9) == KeyEvent.VK_A) {
                 flagVerify = true;
                 konami();
                 return;
@@ -109,7 +109,7 @@ public class CodeKonami {
      * Cambia propiedades de los gráficos
      */
     private void konami() {
-        frame.getjLblInformation().setText("Code Konami activado");
+        frame.getjLblInformation().setText("Enhorabuena, has activado el Code Konami");
         frame.getjBtnKonami().setVisible(true);
     }
 

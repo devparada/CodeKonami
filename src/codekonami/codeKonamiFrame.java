@@ -55,7 +55,6 @@ public class codeKonamiFrame extends JFrame {
         jBtnKonami = new javax.swing.JButton();
         jPnlInformation = new javax.swing.JPanel();
         jLblKeys = new javax.swing.JLabel();
-        jLblShift = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("CodeKonami");
@@ -95,15 +94,11 @@ public class codeKonamiFrame extends JFrame {
         });
         jPnlMain.add(jBtnKonami);
 
-        jPnlInformation.setLayout(new java.awt.GridLayout(2, 0));
+        jPnlInformation.setLayout(new java.awt.GridLayout());
 
         jLblKeys.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLblKeys.setText("Teclas: Up, up, down, down, left, right, left, right, B, A, ENTER");
+        jLblKeys.setText("Combinación: Up, up, down, down, left, right, left, right, B, A");
         jPnlInformation.add(jLblKeys);
-
-        jLblShift.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLblShift.setText("En el code konami original: el ENTER del teclado es el SHIFT en consolas");
-        jPnlInformation.add(jLblShift);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -120,9 +115,9 @@ public class codeKonamiFrame extends JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPnlMain, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, Short.MAX_VALUE)
-                .addComponent(jPnlInformation, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPnlMain, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPnlInformation, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -143,7 +138,6 @@ public class codeKonamiFrame extends JFrame {
     private javax.swing.JButton jBtnKonami;
     private javax.swing.JLabel jLblInformation;
     private javax.swing.JLabel jLblKeys;
-    private javax.swing.JLabel jLblShift;
     private javax.swing.JPanel jPnlInformation;
     private javax.swing.JPanel jPnlMain;
     // End of variables declaration//GEN-END:variables

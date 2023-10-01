@@ -41,8 +41,7 @@ public class MyKeyListener implements KeyListener {
     @Override
     public void keyPressed(KeyEvent e) {
         if (e.getKeyCode() == KeyEvent.VK_UP || e.getKeyCode() == KeyEvent.VK_DOWN || e.getKeyCode() == KeyEvent.VK_LEFT
-                || e.getKeyCode() == KeyEvent.VK_RIGHT || e.getKeyCode() == KeyEvent.VK_B || e.getKeyCode() == KeyEvent.VK_A
-                || e.getKeyCode() == KeyEvent.VK_ENTER) {
+                || e.getKeyCode() == KeyEvent.VK_RIGHT || e.getKeyCode() == KeyEvent.VK_B || e.getKeyCode() == KeyEvent.VK_A) {
             int numberKey = e.getKeyCode();
             codeListener.initial(numberKey);
         }
