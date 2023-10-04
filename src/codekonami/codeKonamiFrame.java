@@ -55,11 +55,16 @@ public class codeKonamiFrame extends JFrame {
         jBtnKonami = new javax.swing.JButton();
         jPnlInformation = new javax.swing.JPanel();
         jLblKeys = new javax.swing.JLabel();
+        jMBar = new javax.swing.JMenuBar();
+        jMnu = new javax.swing.JMenu();
+        AboutJMnuItem = new javax.swing.JMenuItem();
+        ExitJMnuItem = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("CodeKonami");
         setLocation(new java.awt.Point(0, 0));
         setName("frame"); // NOI18N
+        setResizable(false);
 
         jPnlMain.setFocusable(false);
         jPnlMain.setLayout(new java.awt.GridLayout(3, 1));
@@ -94,11 +99,35 @@ public class codeKonamiFrame extends JFrame {
         });
         jPnlMain.add(jBtnKonami);
 
-        jPnlInformation.setLayout(new java.awt.GridLayout());
+        jPnlInformation.setLayout(new java.awt.GridLayout(1, 0));
 
         jLblKeys.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLblKeys.setText("Combinación: Up, up, down, down, left, right, left, right, B, A");
         jPnlInformation.add(jLblKeys);
+
+        jMnu.setText("Menu");
+
+        AboutJMnuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_H, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        AboutJMnuItem.setText("Acerca de");
+        AboutJMnuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AboutJMnuItemActionPerformed(evt);
+            }
+        });
+        jMnu.add(AboutJMnuItem);
+
+        ExitJMnuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        ExitJMnuItem.setText("Salir");
+        ExitJMnuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ExitJMnuItemActionPerformed(evt);
+            }
+        });
+        jMnu.add(ExitJMnuItem);
+
+        jMBar.add(jMnu);
+
+        setJMenuBar(jMBar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -133,11 +162,24 @@ public class codeKonamiFrame extends JFrame {
         jLblKeys.setVisible(true);
     }//GEN-LAST:event_jBtnAlwaysActionPerformed
 
+    private void ExitJMnuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitJMnuItemActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_ExitJMnuItemActionPerformed
+
+    private void AboutJMnuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AboutJMnuItemActionPerformed
+        AboutDialog dialog = new AboutDialog(this, true);
+        dialog.setVisible(true);
+    }//GEN-LAST:event_AboutJMnuItemActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem AboutJMnuItem;
+    private javax.swing.JMenuItem ExitJMnuItem;
     private javax.swing.JButton jBtnAlways;
     private javax.swing.JButton jBtnKonami;
     private javax.swing.JLabel jLblInformation;
     private javax.swing.JLabel jLblKeys;
+    private javax.swing.JMenuBar jMBar;
+    private javax.swing.JMenu jMnu;
     private javax.swing.JPanel jPnlInformation;
     private javax.swing.JPanel jPnlMain;
     // End of variables declaration//GEN-END:variables

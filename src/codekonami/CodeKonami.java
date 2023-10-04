@@ -34,9 +34,9 @@ public class CodeKonami {
      */
     private boolean flagVerify = false;
     /**
-     * Cada 4 segundos llama al método verify()
+     * Cada milisegundo llama al método verify()
      */
-    private Timer timerKonami = new Timer(4000, new ActionListener() {
+    private Timer timerKonami = new Timer(0, new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
             verify();
@@ -96,11 +96,8 @@ public class CodeKonami {
                     && arrayKonami.get(i + 9) == KeyEvent.VK_A) {
                 flagVerify = true;
                 konami();
-                return;
             } else {
                 flagVerify = false;
-                remove();
-                return;
             }
         }
     }
@@ -111,6 +108,7 @@ public class CodeKonami {
     private void konami() {
         frame.getjLblInformation().setText("Enhorabuena, has activado el Code Konami");
         frame.getjBtnKonami().setVisible(true);
+        remove();
     }
 
     /**
